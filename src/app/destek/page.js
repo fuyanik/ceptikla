@@ -25,22 +25,22 @@ const faqs = [
   },
   {
     question: 'Kargo ücreti ne kadar?',
-    answer: '2.000 TL ve üzeri alışverişlerinizde kargo ücretsizdir. Altındaki siparişlerde kargo ücreti ürüne göre değişir.'
+    answer: '5.000 TL ve üzeri alışverişlerinizde kargo ücretsizdir. Altındaki siparişlerde kargo ücreti ürüne göre değişir.'
   },
   {
     question: 'Hangi ödeme yöntemlerini kabul ediyorsunuz?',
     answer: 'Kredi kartı, banka kartı, havale/EFT ve kapıda ödeme seçeneklerini kabul ediyoruz. 12 aya varan taksit imkanı sunuyoruz.'
   },
   {
-    question: 'Mobilya ürünlerinin teslimatı nasıl yapılır?',
-    answer: 'Mobilya ürünlerimiz özel araçlarla adresinize teslim edilir. Kurulum hizmeti ekstra ücrete dahildir.'
+    question: 'Beyaz eşya ürünlerinin teslimatı nasıl yapılır?',
+    answer: 'Beyaz eşya ve mobilya ürünlerimiz özel araçlarla adresinize teslim edilir. Kurulum hizmeti bazı ürünlerde ücretsizdir.'
   }
 ];
 
 const categories = [
-  { icon: HiOutlineTruck, title: 'Kargo & Teslimat', color: 'bg-blue-50 text-blue-600' },
-  { icon: HiOutlineRefresh, title: 'İade & Değişim', color: 'bg-green-50 text-green-600' },
-  { icon: HiOutlineCreditCard, title: 'Ödeme', color: 'bg-purple-50 text-purple-600' },
+  { icon: HiOutlineTruck, title: 'Kargo & Teslimat', color: 'bg-sky-50 text-sky-600' },
+  { icon: HiOutlineRefresh, title: 'İade & Değişim', color: 'bg-emerald-50 text-emerald-600' },
+  { icon: HiOutlineCreditCard, title: 'Ödeme', color: 'bg-violet-50 text-violet-600' },
   { icon: HiOutlineQuestionMarkCircle, title: 'Genel Sorular', color: 'bg-amber-50 text-amber-600' }
 ];
 
@@ -49,11 +49,11 @@ export default function SupportPage() {
   const [message, setMessage] = useState('');
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-8 pt-[10vh]">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50/30 to-white pb-8 pt-[10vh]">
       {/* Header */}
       <div className="bg-white px-4 py-8 text-center border-b border-gray-100">
-        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-50 flex items-center justify-center">
-          <HiOutlineChatAlt2 className="w-8 h-8 text-red-500" />
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-sky-50 flex items-center justify-center">
+          <HiOutlineChatAlt2 className="w-8 h-8 text-sky-500" />
         </div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Nasıl Yardımcı Olabiliriz?</h1>
         <p className="text-gray-500">7/24 müşteri desteği</p>
@@ -141,9 +141,9 @@ export default function SupportPage() {
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Mesajınızı yazın..."
             rows={4}
-            className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl resize-none outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/10 transition-all text-gray-900 placeholder-gray-400"
+            className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl resize-none outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/10 transition-all text-gray-900 placeholder-gray-400"
           />
-          <button className="w-full h-12 bg-red-500 text-white font-semibold rounded-xl hover:bg-red-600 transition-colors">
+          <button className="w-full h-12 bg-sky-500 text-white font-semibold rounded-xl hover:bg-sky-600 transition-colors">
             Gönder
           </button>
         </div>
@@ -161,13 +161,13 @@ export default function SupportPage() {
               <p className="font-medium text-gray-900">+90 554 994 89 89</p>
             </div>
           </a>
-          <a href="mailto:destek@mobilya.com" className="flex-1 p-4 bg-white border border-gray-100 rounded-2xl flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
-              <HiOutlineMail className="w-5 h-5 text-blue-600" />
+          <a href="mailto:destek@evyasam.com" className="flex-1 p-4 bg-white border border-gray-100 rounded-2xl flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+            <div className="w-10 h-10 rounded-xl bg-sky-50 flex items-center justify-center">
+              <HiOutlineMail className="w-5 h-5 text-sky-600" />
             </div>
             <div>
               <p className="text-xs text-gray-500">E-posta</p>
-              <p className="font-medium text-gray-900">destek@mobilya.com</p>
+              <p className="font-medium text-gray-900">destek@evyasam.com</p>
             </div>
           </a>
         </div>

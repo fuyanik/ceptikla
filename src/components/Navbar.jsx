@@ -100,7 +100,7 @@ export default function Navbar() {
           <Link href="/sepet" className="relative w-10 h-10 flex items-center justify-center">
             <HiOutlineShoppingBag className="w-6 h-6 text-gray-700" />
             {getCartCount() > 0 && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 w-5 h-5 bg-sky-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
                 {getCartCount()}
               </span>
             )}
@@ -139,19 +139,19 @@ export default function Navbar() {
               <Logo />
             </div>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Beyaz Eşya Kategorileri */}
             <div className="hidden md:flex items-center gap-8">
-              <Link href="/kategori/kasklar" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                Kasklar
+              <Link href="/kategori/buzdolaplari" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                Buzdolapları
               </Link>
-              <Link href="/kategori/giyim-urunleri" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                Giyim
+              <Link href="/kategori/camasir-makineleri" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                Çamaşır Makinesi
               </Link>
-              <Link href="/kategori/oto-lastikler" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                Lastikler
+              <Link href="/kategori/mobilya" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                Mobilya
               </Link>
-              <Link href="/kategori/eldiven" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                Eldivenler
+              <Link href="/kategori/kahve-makineleri" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+                Kahve Makineleri
               </Link>
             </div>
 
@@ -195,9 +195,9 @@ export default function Navbar() {
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Kask, mont, eldiven ara..."
+                      placeholder="Buzdolabı, çamaşır makinesi, mobilya ara..."
                       autoFocus
-                      className="w-full h-14 pl-12 pr-4 bg-gray-100 border-0 rounded-2xl text-gray-900 placeholder-gray-400 outline-none focus:ring-2 focus:ring-red-500/20 transition-all"
+                      className="w-full h-14 pl-12 pr-4 bg-gray-100 border-0 rounded-2xl text-gray-900 placeholder-gray-400 outline-none focus:ring-2 focus:ring-sky-500/20 transition-all"
                     />
                   </div>
                 </form>
@@ -213,7 +213,7 @@ export default function Navbar() {
               <div className="space-y-4">
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Popüler Aramalar</h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Kask', 'Mont', 'Eldiven', 'Lastik', 'Aksesuar', 'Koruyucu'].map((term) => (
+                  {['Buzdolabı', 'Çamaşır Makinesi', 'Koltuk', 'Kahve Makinesi', 'Yatak', 'Ankastre'].map((term) => (
                     <button
                       key={term}
                       onClick={() => {
@@ -244,7 +244,7 @@ export default function Navbar() {
             className="fixed inset-0 z-60 bg-white overflow-y-auto"
           >
             {/* Header with Gradient & Stats */}
-            <div className="relative bg-gradient-to-br from-gray-900 via-slate-800 to-indigo-900 p-4 pb-6">
+            <div className="relative bg-gradient-to-br from-slate-800 via-sky-900 to-cyan-900 p-4 pb-6">
               {/* Close Button */}
               <button 
                 onClick={() => setIsMenuOpen(false)}
@@ -256,7 +256,7 @@ export default function Navbar() {
               {/* Countdown Timer */}
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-lg bg-red-500 flex items-center justify-center animate-pulse">
+                  <div className="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center animate-pulse">
                     <HiOutlineClock className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -304,9 +304,9 @@ export default function Navbar() {
                   <Link
                     href="/favoriler"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex flex-col items-center gap-2 p-4 bg-pink-50 rounded-2xl hover:bg-pink-100 transition-colors"
+                    className="flex flex-col items-center gap-2 p-4 bg-rose-50 rounded-2xl hover:bg-rose-100 transition-colors"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 flex items-center justify-center">
                       <HiOutlineHeart className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-xs font-medium text-gray-700">Favoriler</span>
@@ -314,13 +314,13 @@ export default function Navbar() {
                   <Link
                     href="/sepet"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex flex-col items-center gap-2 p-4 bg-blue-50 rounded-2xl hover:bg-blue-100 transition-colors relative"
+                    className="flex flex-col items-center gap-2 p-4 bg-sky-50 rounded-2xl hover:bg-sky-100 transition-colors relative"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center">
                       <HiOutlineShoppingBag className="w-5 h-5 text-white" />
                     </div>
                     {getCartCount() > 0 && (
-                      <span className="absolute top-2 right-6 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
+                      <span className="absolute top-2 right-6 w-5 h-5 bg-sky-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
                         {getCartCount()}
                       </span>
                     )}
@@ -329,9 +329,9 @@ export default function Navbar() {
                   <Link
                     href="/firsatlar"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex flex-col items-center gap-2 p-4 bg-orange-50 rounded-2xl hover:bg-orange-100 transition-colors"
+                    className="flex flex-col items-center gap-2 p-4 bg-amber-50 rounded-2xl hover:bg-amber-100 transition-colors"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
                       <HiOutlineTag className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-xs font-medium text-gray-700">Fırsatlar</span>
@@ -394,7 +394,7 @@ export default function Navbar() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center">
                     <HiOutlineLocationMarker className="w-4 h-4 text-white" />
                   </div>
                   <div>

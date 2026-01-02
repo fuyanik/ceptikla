@@ -15,8 +15,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Oto Market 360 - Motorsiklet & Otomotiv Ekipmanları",
-  description: "Oto Market 360, kask, mont, eldiven, lastik ve motosiklet aksesuarları. Güvenli ve hızlı alışveriş.",
+  title: "Trend Evim - Motorsiklet & Otomotiv Ekipmanları",
+  description: "Trend Evim, kask, mont, eldiven, lastik ve motosiklet aksesuarları. Güvenli ve hızlı alışveriş.",
   keywords: "motorsiklet, kask, mont, eldiven, lastik, otomotiv, aksesuar, koruyucu ekipman",
 };
 

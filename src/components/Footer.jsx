@@ -22,9 +22,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className='w-full bg-gray-50'>
+    <footer className='w-full bg-slate-50'>
       {/* Upper Footer - Quick Links & Certifications */}
-      <div className='w-full bg-gray-100 py-6 px-4'>
+      <div className='w-full bg-slate-100 py-6 px-4'>
         <div className='max-w-4xl mx-auto'>
           {/* Quick Links */}
         
@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Certifications */}
           <div className='bg-white rounded-xl p-4 shadow-sm'>
             <div className='flex items-center justify-center gap-2 mb-3'>
-              <FaShieldAlt className='w-5 h-5 text-green-600' />
+              <FaShieldAlt className='w-5 h-5 text-emerald-600' />
               <h3 className='text-sm font-semibold text-gray-700'>Resmi Onaylı Kuruluş</h3>
             </div>
             
@@ -90,14 +90,14 @@ export default function Footer() {
     
       <Image className='mt-4' src={footerlogo2} alt="Logo" width={140}  />
          <p className='text-center text-[13px] text-gray-500 mt-4'>
-          <span className='font-bold' > Oto Market 360 Limited Şirketi,</span> motorsiklet ve otomotiv tutkunlarına yönelik, kask, koruyucu giyim, eldiven, lastik ve aksesuar gibi ürünlerde uzmanlaşmış güvenilir bir e-ticaret platformudur. Kurulduğu günden itibaren müşterilerine hem güvenli hem de sorunsuz bir alışveriş deneyimi sunmak için modern altyapılar ve yüksek güvenlik standartlarıyla hizmet vermektedir.
+          <span className='font-bold' > Trend Evim  Mağazası Limited Şirketi,</span> beyaz eşya, mobilya ve ev dekorasyonu alanlarında uzmanlaşmış güvenilir bir e-ticaret platformudur. Kurulduğu günden itibaren müşterilerine buzdolabı, çamaşır makinesi, koltuk takımı, yatak odası ve mutfak ürünleri gibi geniş ürün yelpazesiyle hem güvenli hem de sorunsuz bir alışveriş deneyimi sunmak için modern altyapılar ve yüksek güvenlik standartlarıyla hizmet vermektedir.
          </p>
-         <p className='text-center text-[13px] text-gray-500 mt-4'> <span className='font-bold' >  otomarket360.com </span> üzerinden yapacağınız alışverişlerde kredi kartı bilgileriniz yalnızca ödeme işlemi sırasında kullanılır ve kesinlikle veri tabanında saklanmaz. Böylece ödeme bilgileriniz üçüncü tarafların erişimine karşı tamamen güvence altındadır.</p>
-         <p className='text-center text-[13px] text-gray-500 mt-4'>Sitemizde gerçekleştirilen tüm işlemlerin gerçekten  <span className='font-bold' >  otomarket360.com </span> sunucularına iletildiğini garanti altına almak için gelişmiş  <span className='font-bold' >  256 bit SSL sertifikası </span>  kullanılmaktadır. Bu teknoloji sayesinde aktardığınız tüm kişisel veriler şifrelenerek güvenli bir şekilde işlenir ve yetkisiz erişimlere karşı korunur.</p>
-         <p className='text-center text-[13px] text-gray-500 mt-4'>Oto Market 360, kullanıcı güvenliğini temel ilke olarak benimser. Hem teknik altyapımızı hem de veri koruma sistemlerimizi düzenli olarak güncelleyerek güvenli alışveriş ortamını daima en üst seviyede tutarız. Amacımız; müşterilerimize hızlı, modern, şeffaf ve güven veren bir alışveriş deneyimi sunmak, satın aldığınız her ürünü sorunsuz şekilde size ulaştırmaktır.</p>
-         <p className='text-center text-[13px] text-gray-500 mt-4'>Oto Market 360 olarak, güvenli alışverişin standartlarını yükseltmeye ve kullanıcılarımıza her zaman konforlu bir deneyim sunmaya devam ediyoruz.</p>
+         <p className='text-center text-[13px] text-gray-500 mt-4'> <span className='font-bold' >  trendevim.com </span> üzerinden yapacağınız alışverişlerde kredi kartı bilgileriniz yalnızca ödeme işlemi sırasında kullanılır ve kesinlikle veri tabanında saklanmaz. Böylece ödeme bilgileriniz üçüncü tarafların erişimine karşı tamamen güvence altındadır.</p>
+         <p className='text-center text-[13px] text-gray-500 mt-4'>Sitemizde gerçekleştirilen tüm işlemlerin gerçekten  <span className='font-bold' >  trendevim.com </span> sunucularına iletildiğini garanti altına almak için gelişmiş  <span className='font-bold' >  256 bit SSL sertifikası </span>  kullanılmaktadır. Bu teknoloji sayesinde aktardığınız tüm kişisel veriler şifrelenerek güvenli bir şekilde işlenir ve yetkisiz erişimlere karşı korunur.</p>
+         <p className='text-center text-[13px] text-gray-500 mt-4'>Trend Evim Mağazası, kullanıcı güvenliğini temel ilke olarak benimser. Hem teknik altyapımızı hem de veri koruma sistemlerimizi düzenli olarak güncelleyerek güvenli alışveriş ortamını daima en üst seviyede tutarız. Amacımız; müşterilerimize hızlı, modern, şeffaf ve güven veren bir alışveriş deneyimi sunmak, satın aldığınız her ürünü sorunsuz şekilde size ulaştırmaktır.</p>
+         <p className='text-center text-[13px] text-gray-500 mt-4'>Trend Evim Mağazası olarak, güvenli alışverişin standartlarını yükseltmeye ve kullanıcılarımıza her zaman konforlu bir deneyim sunmaya devam ediyoruz.</p>
   
-  <div className='w-full mt-4 text-xs bg-black text-white p-3 rounded-md text-center'> ©2014-2025  Oto Market 360 "Oto Market 360 Limited Şirketi" KURULUŞUDUR.</div>
+  <div className='w-full mt-4 text-xs bg-gradient-to-r from-slate-800 to-sky-900 text-white p-3 rounded-md text-center'> ©2014-2025  Trend Evim Mağazası "Trend Evim Mağazası Limited Şirketi" KURULUŞUDUR.</div>
       </div>
     </footer>
   );

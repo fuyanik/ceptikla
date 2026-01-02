@@ -69,57 +69,97 @@ export function ProductsProvider({ children }) {
     return products.filter(p => p.category === categoryId);
   };
 
-  // Öne çıkan ürünleri getir (featured veya homepageSections'da 'featured' olanlar)
+  // ========================================
+  // ANA SAYFA BÖLÜMLERİ - Otomatik Filtreleme
+  // (products collection'una dokunmadan)
+  // ========================================
+
+  // Ayın Süper İndirimleri - En yüksek indirimli ürünler
+  const getSelectedForYouProducts = () => {
+    // Önce homepageSections'dan kontrol et
+    const fromSections = products.filter(p => 
+      p.homepageSections && p.homepageSections.includes('selected')
+    );
+    if (fromSections.length > 0) {
+      return fromSections.sort((a, b) => {
+        const orderA = a.homepageSectionOrder?.['selected'] ?? 999;
+        const orderB = b.homepageSectionOrder?.['selected'] ?? 999;
+        return orderA - orderB;
+      });
+    }
+    
+    // Yoksa indirimli ürünlerden al
+    return products
+      .filter(p => p.discount && p.discount > 0)
+      .sort((a, b) => (b.discount || 0) - (a.discount || 0))
+      .slice(0, 15);
+  };
+
+  // Beyaz Eşya Fırsatları - Featured ürünler veya rating'e göre
   const getFeaturedProducts = () => {
+    // Önce featured olanları kontrol et
     const featured = products.filter(p => 
       p.featured === true || 
       (p.homepageSections && p.homepageSections.includes('featured'))
     );
-    // Sıralamaya göre sırala
-    return featured.sort((a, b) => {
-      const orderA = a.homepageSectionOrder?.['featured'] ?? 999;
-      const orderB = b.homepageSectionOrder?.['featured'] ?? 999;
-      return orderA - orderB;
-    });
+    if (featured.length > 0) {
+      return featured.sort((a, b) => {
+        const orderA = a.homepageSectionOrder?.['featured'] ?? 999;
+        const orderB = b.homepageSectionOrder?.['featured'] ?? 999;
+        return orderA - orderB;
+      });
+    }
+    
+    // Yoksa rating'e göre en iyi ürünleri al
+    return products
+      .filter(p => p.rating && p.rating > 0)
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .slice(0, 15);
   };
 
-  // Okul alışverişi ürünlerini getir
+  // Mutfak Ürünleri / Bu Ayın Önerileri - Son eklenen ürünler
   const getSchoolShoppingProducts = () => {
+    // Önce homepageSections'dan kontrol et
     const school = products.filter(p => 
       p.homepageSections && p.homepageSections.includes('school')
     );
-    // Sıralamaya göre sırala
-    return school.sort((a, b) => {
-      const orderA = a.homepageSectionOrder?.['school'] ?? 999;
-      const orderB = b.homepageSectionOrder?.['school'] ?? 999;
-      return orderA - orderB;
-    });
+    if (school.length > 0) {
+      return school.sort((a, b) => {
+        const orderA = a.homepageSectionOrder?.['school'] ?? 999;
+        const orderB = b.homepageSectionOrder?.['school'] ?? 999;
+        return orderA - orderB;
+      });
+    }
+    
+    // Yoksa son eklenen ürünleri al
+    return products
+      .sort((a, b) => {
+        const dateA = a.createdAt?.toDate?.() || new Date(a.createdAt) || new Date(0);
+        const dateB = b.createdAt?.toDate?.() || new Date(b.createdAt) || new Date(0);
+        return dateB - dateA;
+      })
+      .slice(0, 15);
   };
 
-  // En çok favorilenen ürünleri getir
+  // Mobilya Koleksiyonu / Favoriler - En çok değerlendirilen
   const getMostFavoritedProducts = () => {
+    // Önce homepageSections'dan kontrol et
     const favorites = products.filter(p => 
       p.homepageSections && p.homepageSections.includes('favorites')
     );
-    // Sıralamaya göre sırala
-    return favorites.sort((a, b) => {
-      const orderA = a.homepageSectionOrder?.['favorites'] ?? 999;
-      const orderB = b.homepageSectionOrder?.['favorites'] ?? 999;
-      return orderA - orderB;
-    });
-  };
-
-  // Sizin için seçtiklerimiz ürünlerini getir
-  const getSelectedForYouProducts = () => {
-    const selected = products.filter(p => 
-      p.homepageSections && p.homepageSections.includes('selected')
-    );
-    // Sıralamaya göre sırala
-    return selected.sort((a, b) => {
-      const orderA = a.homepageSectionOrder?.['selected'] ?? 999;
-      const orderB = b.homepageSectionOrder?.['selected'] ?? 999;
-      return orderA - orderB;
-    });
+    if (favorites.length > 0) {
+      return favorites.sort((a, b) => {
+        const orderA = a.homepageSectionOrder?.['favorites'] ?? 999;
+        const orderB = b.homepageSectionOrder?.['favorites'] ?? 999;
+        return orderA - orderB;
+      });
+    }
+    
+    // Yoksa en çok değerlendirilen ürünleri al
+    return products
+      .filter(p => p.reviews && p.reviews > 0)
+      .sort((a, b) => (b.reviews || 0) - (a.reviews || 0))
+      .slice(0, 15);
   };
 
   // Belirli bir bölümdeki ürünleri getir
@@ -130,7 +170,7 @@ export function ProductsProvider({ children }) {
   };
 
   // İndirimli ürünleri getir
-  const getDiscountedProducts = (minDiscount = 10) => {
+  const getDiscountedProducts = (minDiscount = 0) => {
     return products
       .filter(p => p.discount && p.discount >= minDiscount)
       .sort((a, b) => (b.discount || 0) - (a.discount || 0));

@@ -17,9 +17,9 @@ function SearchContent() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-[106px]">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-sky-50 to-white pt-[106px]">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-red-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <div className="w-12 h-12 border-4 border-sky-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
           <p className="text-gray-500 font-medium">Aranıyor...</p>
         </div>
       </div>
@@ -27,7 +27,7 @@ function SearchContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-[106px]">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50/30 to-white pt-[106px]">
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Search Header */}
         <div className="mb-6">
@@ -53,8 +53,8 @@ function SearchContent() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center py-16"
           >
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-100 flex items-center justify-center">
-              <HiOutlineSearch className="w-10 h-10 text-gray-400" />
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-sky-50 flex items-center justify-center">
+              <HiOutlineSearch className="w-10 h-10 text-sky-400" />
             </div>
             <h2 className="text-xl font-semibold text-gray-900 mb-2">Sonuç Bulunamadı</h2>
             <p className="text-gray-500 mb-6">
@@ -62,11 +62,11 @@ function SearchContent() {
               Farklı anahtar kelimeler deneyebilirsiniz.
             </p>
             <div className="flex flex-wrap justify-center gap-2">
-              {['Koltuk', 'Yatak', 'Buzdolabı', 'Masa', 'Sandalye'].map((suggestion) => (
+              {['Buzdolabı', 'Çamaşır Makinesi', 'Koltuk', 'Yatak', 'Kahve Makinesi'].map((suggestion) => (
                 <a
                   key={suggestion}
                   href={`/ara?q=${suggestion}`}
-                  className="px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors"
+                  className="px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200 hover:bg-sky-50 hover:border-sky-200 hover:text-sky-600 transition-colors"
                 >
                   {suggestion}
                 </a>
@@ -84,9 +84,9 @@ function SearchContent() {
 export default function SearchPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-[106px]">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-sky-50 to-white pt-[106px]">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-red-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <div className="w-12 h-12 border-4 border-sky-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
           <p className="text-gray-500 font-medium">Yükleniyor...</p>
         </div>
       </div>

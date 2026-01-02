@@ -11,9 +11,9 @@ export default function DealsPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 pt-[106px]">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-sky-50 to-white pt-[106px]">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-red-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <div className="w-12 h-12 border-4 border-sky-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
           <p className="text-gray-500 font-medium">Yükleniyor...</p>
         </div>
       </div>
@@ -21,14 +21,14 @@ export default function DealsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-[106px]">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50/30 to-white pt-[106px]">
       {/* Hero Banner */}
-      <div className="bg-gradient-to-r from-red-500 to-orange-500 px-4 py-8 text-center">
+      <div className="bg-gradient-to-r from-sky-500 via-cyan-500 to-teal-500 px-4 py-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="text-5xl mb-4 block">🔥</span>
+          <span className="text-5xl mb-4 block">🏠</span>
           <h1 className="text-3xl font-bold text-white mb-2">Fırsat Ürünleri</h1>
           <p className="text-white/90">Kaçırılmayacak indirimler sizleri bekliyor!</p>
         </motion.div>
@@ -47,8 +47,8 @@ export default function DealsPage() {
               key={index}
               className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
                 index === 0 
-                  ? 'bg-red-500 text-white' 
-                  : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50'
+                  ? 'bg-sky-500 text-white' 
+                  : 'bg-white text-gray-700 border border-gray-200 hover:bg-sky-50 hover:border-sky-200'
               }`}
             >
               {filter.label}

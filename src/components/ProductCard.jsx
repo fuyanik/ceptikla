@@ -123,7 +123,7 @@ export default function ProductCard({ product, index = 0 }) {
               <motion.button 
                 whileTap={{ scale: 0.9 }}
                 onClick={handleAddToCart}
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-900 text-white hover:bg-red-500 transition-colors shadow-sm"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-900 text-white hover:bg-sky-500 transition-colors shadow-sm"
               >
                 <HiOutlineShoppingCart className="w-4 h-4" />
               </motion.button>

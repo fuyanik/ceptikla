@@ -17,18 +17,16 @@ import {
   HiHome
 } from 'react-icons/hi';
 import { 
-  GiFullMotorcycleHelmet, 
-  GiCarWheel,
-  GiGloves,
-  GiSteeringWheel,
-  GiSpeedometer,
-  GiCarKey
-} from 'react-icons/gi';
-import { 
-  FaMotorcycle, 
-  FaCar,
-  FaGasPump
-} from 'react-icons/fa';
+  TbFridge,
+  TbWashMachine,
+  TbSofa,
+  TbCoffee,
+  TbSnowflake,
+  TbFlame,
+  TbBath,
+  TbLamp,
+  TbArmchair
+} from 'react-icons/tb';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
 
@@ -69,17 +67,17 @@ const navItems = [
   },
 ];
 
-// Professional automotive icons from react-icons library
+// Beyaz Eşya & Mobilya ikonları
 const icons = [
-  { id: 'helmet', Icon: GiFullMotorcycleHelmet },  // Motorsiklet Kaskı
-  { id: 'motorcycle', Icon: FaMotorcycle },         // Motorsiklet
-  { id: 'gloves', Icon: GiGloves },                 // Eldiven
-  { id: 'tire', Icon: GiCarWheel },                 // Lastik/Tekerlek
-  { id: 'car', Icon: FaCar },                       // Araba
-  { id: 'steering', Icon: GiSteeringWheel },        // Direksiyon
-  { id: 'speedometer', Icon: GiSpeedometer },       // Hız Göstergesi
-  { id: 'gas', Icon: FaGasPump },                   // Benzin Pompası
-  { id: 'carkey', Icon: GiCarKey },                 // Araba Anahtarı
+  { id: 'fridge', Icon: TbFridge },           // Buzdolabı
+  { id: 'washer', Icon: TbWashMachine },       // Çamaşır Makinesi
+  { id: 'sofa', Icon: TbSofa },                // Koltuk
+  { id: 'coffee', Icon: TbCoffee },            // Kahve Makinesi
+  { id: 'freezer', Icon: TbSnowflake },        // Derin Dondurucu
+  { id: 'heater', Icon: TbFlame },             // Isıtıcı
+  { id: 'bath', Icon: TbBath },                // Banyo
+  { id: 'lamp', Icon: TbLamp },                // Aydınlatma
+  { id: 'chair', Icon: TbArmchair },           // Koltuk
 ];
 
 // Sliding icon component with fade in/out
@@ -180,14 +178,14 @@ export default function BottomNavbar({ force = false }) {
           transition={{ type: 'spring', stiffness: 400, damping: 20 }}
           className="relative"
         >
-          <Icon className={`w-6 h-6 transition-colors ${isActive ? 'text-red-500' : 'text-gray-400'}`} />
+          <Icon className={`w-6 h-6 transition-colors ${isActive ? 'text-sky-500' : 'text-gray-400'}`} />
           
           {/* Badge for cart */}
           {item.id === 'cart' && cartCount > 0 && (
             <motion.span
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center"
+              className="absolute -top-2 -right-2 w-5 h-5 bg-sky-500 text-white text-xs font-bold rounded-full flex items-center justify-center"
             >
               {cartCount > 99 ? '99+' : cartCount}
             </motion.span>
@@ -198,7 +196,7 @@ export default function BottomNavbar({ force = false }) {
             <motion.span
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center"
+              className="absolute -top-2 -right-2 w-5 h-5 bg-sky-500 text-white text-xs font-bold rounded-full flex items-center justify-center"
             >
               {wishlistCount > 99 ? '99+' : wishlistCount}
             </motion.span>
@@ -211,7 +209,7 @@ export default function BottomNavbar({ force = false }) {
             opacity: isActive ? 1 : 0.6,
             scale: isActive ? 1.05 : 1
           }}
-          className={`text-[10px] font-medium transition-colors ${isActive ? 'text-red-500' : 'text-gray-400'}`}
+          className={`text-[10px] font-medium transition-colors ${isActive ? 'text-sky-500' : 'text-gray-400'}`}
         >
           {item.label}
         </motion.span>
@@ -224,7 +222,7 @@ export default function BottomNavbar({ force = false }) {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
-              className="absolute -bottom-1 w-1 h-1 rounded-full bg-red-500"
+              className="absolute -bottom-1 w-1 h-1 rounded-full bg-sky-500"
             />
           )}
         </AnimatePresence>
@@ -251,8 +249,8 @@ export default function BottomNavbar({ force = false }) {
               whileTap={{ scale: 0.9 }}
               className="w-16 h-16 rounded-2xl overflow-hidden shadow-xl relative"
             >
-              {/* Gradient Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800" />
+              {/* Gradient Background - Beyaz Eşya teması */}
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-500 via-cyan-600 to-teal-700" />
               
               {/* Animated shine effect */}
               <motion.div

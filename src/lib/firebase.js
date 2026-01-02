@@ -18,7 +18,7 @@ if (!getApps().length) {
     isSupported().then((supported) => {
       if (supported) {
         analytics = getAnalytics(app);
-        console.log("🏍️ Firebase Analytics aktif! - Otomotiv Sepeti");
+        console.log("🏠 Firebase Analytics aktif! - Ev & Yaşam Mağazası");
       }
     });
   }

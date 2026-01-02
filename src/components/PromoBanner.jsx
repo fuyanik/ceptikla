@@ -23,7 +23,7 @@ export default function PromoBanner() {
     <motion.div
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white h-[46px] px-3 overflow-hidden"
+      className="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-slate-800 via-sky-900 to-slate-800 text-white h-[46px] px-3 overflow-hidden"
     >
       {/* Animated background shine */}
       <motion.div
@@ -68,7 +68,7 @@ export default function PromoBanner() {
         ))}
       </div>
 
-      {/* Animated Motorcycle - Left to Right */}
+      {/* Animated Home Icon - Left to Right */}
       <motion.div
         className="absolute bottom-1 text-xl"
         animate={{
@@ -80,10 +80,10 @@ export default function PromoBanner() {
           ease: 'linear',
         }}
       >
-        🏍️
+        🏠
       </motion.div>
 
-      {/* Animated Motorcycle - Right to Left (smaller, faster) */}
+      {/* Animated Appliance Icon - Right to Left (smaller, faster) */}
       <motion.div
         className="absolute top-1 text-sm opacity-60"
         animate={{
@@ -96,7 +96,7 @@ export default function PromoBanner() {
           delay: 3,
         }}
       >
-        🏎️
+        🛋️
       </motion.div>
 
       {/* Speed lines effect */}

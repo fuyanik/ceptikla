@@ -11,9 +11,9 @@ export default function FavoritesPage() {
 
   if (wishlist.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center bg-gray-50 pt-[106px]">
-        <div className="w-24 h-24 rounded-full bg-red-50 flex items-center justify-center mb-6">
-          <HiOutlineHeart className="w-12 h-12 text-red-300" />
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center bg-gradient-to-b from-rose-50 to-white pt-[106px]">
+        <div className="w-24 h-24 rounded-full bg-rose-50 flex items-center justify-center mb-6">
+          <HiOutlineHeart className="w-12 h-12 text-rose-300" />
         </div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Favori Listeniz Boş</h1>
         <p className="text-gray-500 mb-8">
@@ -21,7 +21,7 @@ export default function FavoritesPage() {
         </p>
         <Link
           href="/"
-          className="px-8 py-3 bg-red-500 text-white font-semibold rounded-xl hover:bg-red-600 transition-colors"
+          className="px-8 py-3 bg-sky-500 text-white font-semibold rounded-xl hover:bg-sky-600 transition-colors"
         >
           Alışverişe Başla
         </Link>
@@ -30,7 +30,7 @@ export default function FavoritesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-[106px]">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50/30 to-white pt-[106px]">
       {/* Header */}
       <div className="bg-white px-4 py-6 border-b border-gray-100">
         <h1 className="text-2xl font-bold text-gray-900">Favorilerim</h1>

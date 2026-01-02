@@ -61,9 +61,9 @@ export default function CartPage() {
 
   if (cart.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center bg-gray-50 pt-[106px]">
-        <div className="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center mb-6">
-          <HiOutlineShoppingCart className="w-12 h-12 text-gray-400" />
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center bg-gradient-to-b from-sky-50 to-white pt-[106px]">
+        <div className="w-24 h-24 rounded-full bg-sky-50 flex items-center justify-center mb-6">
+          <HiOutlineShoppingCart className="w-12 h-12 text-sky-400" />
         </div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Sepetiniz Boş</h1>
         <p className="text-gray-500 mb-8">
@@ -71,7 +71,7 @@ export default function CartPage() {
         </p>
         <Link
           href="/"
-          className="px-8 py-3 bg-red-500 text-white font-semibold rounded-xl hover:bg-red-600 transition-colors"
+          className="px-8 py-3 bg-sky-500 text-white font-semibold rounded-xl hover:bg-sky-600 transition-colors"
         >
           Alışverişe Başla
         </Link>
@@ -80,7 +80,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-40 pt-[106px]">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50/30 to-white pb-40 pt-[106px]">
       {/* Countdown Banner */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -90,7 +90,7 @@ export default function CartPage() {
         <div 
           className="relative overflow-hidden rounded-2xl"
           style={{
-            background: 'linear-gradient(135deg, #ff6b6b 0%, #ff8e53 25%, #ff6b9d 50%, #c44569 75%, #ff6b6b 100%)',
+            background: 'linear-gradient(135deg, #0ea5e9 0%, #06b6d4 25%, #14b8a6 50%, #0d9488 75%, #0ea5e9 100%)',
             backgroundSize: '200% 200%',
           }}
         >
@@ -98,7 +98,7 @@ export default function CartPage() {
           <motion.div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(135deg, #ff6b6b 0%, #ff8e53 25%, #ff6b9d 50%, #c44569 75%, #ff6b6b 100%)',
+              background: 'linear-gradient(135deg, #0ea5e9 0%, #06b6d4 25%, #14b8a6 50%, #0d9488 75%, #0ea5e9 100%)',
               backgroundSize: '200% 200%',
             }}
             animate={{
@@ -224,13 +224,13 @@ export default function CartPage() {
         transition={{ delay: 0.2 }}
         className="mx-4 mb-4"
       >
-        <div className="flex items-center gap-3 px-4 py-3 bg-green-50 border border-green-100 rounded-xl">
-          <div className="w-8 h-8 flex items-center justify-center bg-green-100 rounded-full">
-            <HiCheckCircle className="w-5 h-5 text-green-600" />
+        <div className="flex items-center gap-3 px-4 py-3 bg-emerald-50 border border-emerald-100 rounded-xl">
+          <div className="w-8 h-8 flex items-center justify-center bg-emerald-100 rounded-full">
+            <HiCheckCircle className="w-5 h-5 text-emerald-600" />
           </div>
           <div>
-            <p className="text-green-800 font-semibold text-sm">🎉 Tebrikler! Ücretsiz kargo hakkı kazandınız</p>
-            <p className="text-green-600 text-xs">Bu sipariş için kargo ücreti alınmayacaktır</p>
+            <p className="text-emerald-800 font-semibold text-sm">🎉 Tebrikler! Ücretsiz kargo hakkı kazandınız</p>
+            <p className="text-emerald-600 text-xs">Bu sipariş için kargo ücreti alınmayacaktır</p>
           </div>
         </div>
       </motion.div>
@@ -297,7 +297,7 @@ export default function CartPage() {
 
                   <button
                     onClick={() => removeFromCart(item.id)}
-                    className="w-8 h-8 flex items-center justify-center text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+                    className="w-8 h-8 flex items-center justify-center text-rose-500 hover:bg-rose-50 rounded-lg transition-colors"
                   >
                     <HiOutlineTrash className="w-5 h-5" />
                   </button>
@@ -317,7 +317,7 @@ export default function CartPage() {
           </div>
           <div className="flex justify-between text-gray-500">
             <span>Kargo</span>
-            <span className="text-green-600 font-medium">Ücretsiz</span>
+            <span className="text-emerald-600 font-medium">Ücretsiz</span>
           </div>
           <div className="h-px bg-gray-100" />
           <div className="flex justify-between font-bold text-lg text-gray-900">
@@ -336,7 +336,7 @@ export default function CartPage() {
         <motion.button
           whileTap={{ scale: 0.98 }}
           onClick={() => router.push('/checkout')}
-          className="relative w-full h-14 bg-gradient-to-r from-gray-900 via-slate-800 to-indigo-900 text-white font-semibold text-lg rounded-2xl shadow-xl overflow-hidden"
+          className="relative w-full h-14 bg-gradient-to-r from-slate-800 via-sky-900 to-cyan-900 text-white font-semibold text-lg rounded-2xl shadow-xl overflow-hidden"
         >
           {/* Shine effect */}
           <motion.div
