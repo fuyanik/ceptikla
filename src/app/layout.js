@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Trend Evim - Motorsiklet & Otomotiv Ekipmanları",
-  description: "Trend Evim, kask, mont, eldiven, lastik ve motosiklet aksesuarları. Güvenli ve hızlı alışveriş.",
-  keywords: "motorsiklet, kask, mont, eldiven, lastik, otomotiv, aksesuar, koruyucu ekipman",
+  title: "Trend Evim - Beyaz Eşya, Mobilya ve Ev Dekorasyonu",
+  description: "Trend Evim Beyaz Eşya, Mobilya ve Ev Dekorasyonu alanlarında uzmanlaşmış güvenilir bir e-ticaret platformudur.",
+  keywords: "beyaz eşya, mobilya, ev dekorasyonu, e-ticaret, alışveriş, güvenli, hızlı, modern, şeffaf, güven, deneyim",
 };
 
 export const viewport = {
