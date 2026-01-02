@@ -161,13 +161,13 @@ export default function SupportPage() {
               <p className="font-medium text-gray-900">+90 554 994 89 89</p>
             </div>
           </a>
-          <a href="mailto:destek@evyasam.com" className="flex-1 p-4 bg-white border border-gray-100 rounded-2xl flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+          <a href="mailto:destek@trendevim.com" className="flex-1 p-4 bg-white border border-gray-100 rounded-2xl flex items-center gap-3 shadow-sm hover:shadow-md transition-shadow">
             <div className="w-10 h-10 rounded-xl bg-sky-50 flex items-center justify-center">
               <HiOutlineMail className="w-5 h-5 text-sky-600" />
             </div>
             <div>
               <p className="text-xs text-gray-500">E-posta</p>
-              <p className="font-medium text-gray-900">destek@evyasam.com</p>
+              <p className="font-medium text-gray-900">destek@trendevim.com</p>
             </div>
           </a>
         </div>
